@@ -20,6 +20,9 @@
     --github: #302f2f;
     --intrests: #00b109;
     --nav-hover: #ffe600;
+    --icon: #8b0303;
+    --btn: #ac0000;
+    --btn-hover: #ffe600;
 }
 
 /*------Special Paddings/Margins/Text------*/
@@ -198,7 +201,7 @@ footer .cv-pdf i:hover {
 .about-me-icon {
     padding-top: 4px;
     font-size: 23px;
-    color: #fd0000;
+    color: var(--icon);
 }
 
 .personal-detail{
@@ -217,7 +220,30 @@ footer .cv-pdf i:hover {
     font-size: 15px;
 }
 
+/*------Contact------*/
 
+.btn{
+    font-family: var(--text-fonts);
+    width:200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.btn-contact{
+    background-color: var(--btn);
+    color: var(--white);
+}
+
+.btn-contact:hover{
+    background-color: var(--btn-hover);
+    color: var(--black)
+}
+
+.contact-info{
+    font-family: var(--text-fonts);
+    font-size: 20px;
+}
 /*-----GitHub-----*/
 
 .github-heading {
@@ -227,20 +253,7 @@ footer .cv-pdf i:hover {
     margin-bottom: 20px;
 }
 
-/*-----Contact-----*/
 
-.btn{
-    width:200px;
-}
-
-.btn-contact{
-    background-color: #df0000;
-    color: #fafafa;
-}
-
-.btn-contact:hover{
-    background-color: #66167e;
-}
 
 
 
@@ -325,12 +338,7 @@ footer .cv-pdf i:hover {
     margin-bottom: 30px;
 }
 
-button[type="submit"] {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background-color: #e84610;
-    color: #fafafa;
-}
+
 
 /*--------------------------------------------Map*/
 div#map {
