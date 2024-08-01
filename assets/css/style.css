@@ -1,110 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
-
+/*------Custom Vars------*/
 :root {
     /** Fonts */
     --headers: 'EB Garamond', serif, arial;
     --text-fonts: 'Roboto', serif, arial;
 
     /* Colours */
-    --background: #a89d9dbb;
-    --header-footer: #000933e7;
+    --background: #b9b9b9;
+    --header-footer: #343536e7;
     --white: #ffffff;
     --black: #000000;
     --footer-hover: #ffd900;
     --social: #ff0c0c;
-
+    --home: #ff0000;
+    --resume: #00cbfd;
+    --contact: #000a94;
+    --download: #b700ff;
+    --github: #302f2f;
+    --intrests: #00b109;
+    --nav-hover: #ffe600;
 }
-
-
-/*-----body-----*/
-
-body {
-    font-family: var(--text-fonts);
-    font-weight: 300;
-    background-color: #8a8a8a;
-    color: #000000;
-}
-
-/*-----Colors----*/
-
-.bg-personal {
-    background-color: #171725;
-}
-
-.menu-home {
-    background-color: #e60000;
-}
-
-.menu-resume {
-    background-color: #028f8f;
-}
-
-.menu-contact {
-    background-color: #00253d;
-}
-
-.menu-download {
-    background-color: #c99300;
-}
-
-.menu-github {
-    background-color: #222222;
-}
-
-.menu-interests {
-    background-color: #17850d;
-}
-
-/*---nav---*/
-
-.menu-item:hover {
-    background: #66167e;
-    height: 100px;
-}
-.menu-item a:hover, .menu-item a i:hover{
-    color: #000000;
-}
-
-.menu-item {
-    height: 100px;
-    text-align: center;
-}
-
-.menu-item a {
-    text-decoration: none;
-    color: #ffffff;
-    height: 10px;
-}
-
-
-.menu-item a i {
-    padding-top: 22px;
-    display: block;
-    color: #ffffff;
-    font-size: 26px;
-}
-
-.menu-item span {
-    display: block;
-    width: 100%;
-    padding-top: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-
 
 /*-----Special Paddings/Margins/Text-----*/
-
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     margin: 0;
+    font-family: var(--headers);
 }
 
 .uppercase {
@@ -115,7 +40,76 @@ h4 {
     font-weight: 800;
 }
 
+/*-----body-----*/
+body {
+    font-family: var(--text-fonts);
+    font-weight: 300;
+    background-color: var(--background);
+    color: var(--black);
+}
+
+/*---nav---*/
+.menu-home {
+    background-color: var(--home);
+}
+.menu-resume {
+    background-color: var(--resume);
+}
+
+.menu-contact {
+    background-color: var(--contact);
+}
+
+.menu-download {
+    background-color: var(--download);
+}
+
+.menu-github {
+    background-color: var(--github);
+}
+
+.menu-interests {
+    background-color: var(--intrests);
+}
+.menu-item:hover {
+    background: var(--nav-hover);
+}
+.menu-item a:hover, .menu-item a i:hover{
+    color: var(--black);
+}
+
+.menu-item {
+    height: 80px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu-item a i {
+    padding-top: 15px;
+    display: block;
+    color: var(--white);
+    font-size: 25px;
+}
+
+.menu-item span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
 /*-----Heading-----*/
+header{
+    background-color: var(--header-footer); 
+}
 
 .logo {
     background: url("../images/me.jpg");
@@ -123,26 +117,20 @@ h4 {
     background-repeat: no-repeat;
     min-height: 330px;
     min-width: fit-content;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
 }
 
 .name {
-    font-family: "Exo", sans-serif;
     font-weight: 100;
-    font-size: 46px;
-    margin-top: 50px;
-    color: #ffffff;
+    font-size: 55px;
+    margin-top: 40px;
+    color: var(--white);
 }
 
 .title {
-    font-family: "Roboto", sans-serif;
     font-weight: 200;
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 90px;
-    color: #ffffff;
+    font-size: 32px;
+    margin-top: 30px;
+    color: var(--white);
 }
 
 /*-----Footer-----*/
@@ -177,8 +165,6 @@ footer .cv-pdf i:hover {
     padding-top: 10px;
 }
 
-
-
 .social-links li a i {
     width: 34px;
     margin-bottom: 10px;
@@ -199,6 +185,9 @@ footer .cv-pdf i:hover {
 
 /*-----Personal Info-----*/
 
+.bg-personal {
+    background-color: #171725;
+}
 .personal-info{
     color: #ffffff;
 }
