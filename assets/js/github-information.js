@@ -1,20 +1,20 @@
 function userInformationHTML(user) {
     return `
-        <h2 class="account-name text-center text-md-start mt-3">${user.name}</h2>
-        <h3 class="small-name text-center text-md-start mt-1">
-            (@<a class="small-name" href="${user.html_url}" target="_blank">${user.login}</a>)
-        </h3>
-        <div class="gh-content pt-3 mt-2">
-            <div class="row">
-                <div class="col text-center text-md-start pt-3">
-                    <a href="${user.html_url}" target="_blank">
-                        <img src="${user.avatar_url}" class="gh-avatar" alt="${user.login}" />
-                    </a>
-                </div>
-                <div class="col text-center text-md-start pt-3">
-                    <p>Followers: ${user.followers}</p>
-                    <p>Following ${user.following}</p>
-                    <p>Repos: ${user.public_repos}</p>
+        <div class="row pt-3 mt-2">
+            <div class="col-12 col-xl-8 text-center text-md-start pt-2">
+                <a href="${user.html_url}" target="_blank">
+                    <img src="${user.avatar_url}" class="github-avatar" alt="${user.login}" />
+                </a>
+                <h2 class="account-name text-center text-md-start mt-3">${user.name}</h2>
+                <h3 class="small-name text-center text-md-start mt-1">
+                    (@<a class="small-name" href="${user.html_url}" target="_blank">${user.login}</a>)
+                </h3>
+            </div>
+            <div class="col-12 col-xl-4 text-center text-md-start pt-3 pt-xl-5 mt-xl-5">
+                <div class="col text-center text-md-start github-info">
+                    <p class="p-0 m-0">Followers: ${user.followers}</p>
+                    <p class="p-0 m-0">Following ${user.following}</p>
+                    <p class="p-0 m-0">Repos: ${user.public_repos}</p>
                 </div>
             </div>
         </div>`;
@@ -32,9 +32,9 @@ function repoInformationHTML(repos) {
     });
 
     return `
-                <p class="mt-4">
-                    <strong>Repo List:</strong>
-                </p>
+            <h4 class="mt-4 github-repo text-center text-md-start">
+                <strong>Repo List:</strong>
+            </h4>
             <div class="repo-list mt-4">
                 <ul>
                     ${listItemsHTML.join("\n")}

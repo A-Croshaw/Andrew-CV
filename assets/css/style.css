@@ -245,17 +245,24 @@ footer .cv-pdf i:hover {
     font-size: 20px;
 }
 /*-----GitHub-----*/
-
-.github-heading {
-    font-family: "Exo", sans-serif;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.github-text{
+    font-family: var(--headers);
 }
 
+.github-repo{
+    font-size: 25px;
+    font-weight: 500;
+}
 
+.github-info{
+    font-family: var(--text-fonts);
+    font-size: 20px;
+}
 
-
+.github-avatar{
+    height: 250px;
+    border-radius: 50%;
+}
 
 
 
