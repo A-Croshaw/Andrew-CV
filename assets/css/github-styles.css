@@ -1,0 +1,72 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+/* page content styles */
+
+.small-name {
+  font-size: 1.25rem;
+  color: #000000;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.account-name {
+  color: #000000;
+}
+
+.gh-avatar{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+
+}
+
+.gh-content{
+  color: #000000ef;
+}
+
+.repo-list ul {
+  font-size: 1.2em;
+}
+
+.repo-list ul li {
+  display: block;
+}
+
+.repo-list ul li a {
+  font-weight:500;
+  padding: 6px 9px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: 1px solid #000000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #030303;
+  background-color: #fc6363;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fc6363), to(#06f8d8));
+  background-image: -webkit-linear-gradient(top, #fc6363, #06f8d8);
+  background-image: -moz-linear-gradient(top, #fc6363, #06f8d8);
+  background-image: -ms-linear-gradient(top, #fc6363, #06f8d8);
+  background-image: -o-linear-gradient(top, #fc6363, #06f8d8);
+  background-image: linear-gradient(top, #fc6363, #06f8d8);
+}
+
+.repo-list ul li a:hover {
+  background-color: #f80606;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f80606), to(#396895));
+  background-image: -webkit-linear-gradient(top, #f80606, #396895);
+  background-image: -moz-linear-gradient(top, #f80606, #396895);
+  background-image: -ms-linear-gradient(top, #f80606, #396895);
+  background-image: -o-linear-gradient(top, #f80606, #396895);
+  background-image: linear-gradient(top, #f80606, #396895);
+}
+
+
+.repo-list ul li a span {
+  font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
+  font-size: 1rem;
+}
+
