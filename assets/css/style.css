@@ -281,7 +281,7 @@ footer .cv-pdf i:hover {
 
 .about-info {
     font-family: var(--text-fonts);
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /*----------Contact----------*/
@@ -469,27 +469,27 @@ footer .cv-pdf i:hover {
     font-size: 25px;
 
 }
-.three-reasons-heading {
-    margin-bottom: 15px;
-}
+
 /*--Progress bars--*/
 .progress {
     position: relative;
     height: 25px;
+    margin: 5px;
+    border: 1px solid var(--black);
+    background-color: #ffd7d7;
+
+}
+
+.progress-sec{
+    padding: 0px 60px;
 }
 
 .progress-type {
     position: absolute;
-    left: 0px;
     font-weight: 400;
-    padding: 3px 30px 2px 10px;
-    color: #fafafa;
-    background-color: rgba(25, 25, 25, 0.2);
-}
-
-
-.progress-section {
-    margin: 40px 20px;
+    padding: 10px;
+    color: var(--white);
+    background-color: rgba(2, 2, 2, 0.514);
 }
 
 /*----------Education----------*/
