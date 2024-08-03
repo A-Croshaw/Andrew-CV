@@ -11,13 +11,15 @@
 
     /*--Colours--*/
 
-    --background: #9b9a9a;
+    --background: #797979;
     --header-footer: #343536e7;
     --white: #ffffff;
     --black: #000000;
     --footer-hover: #ffd900;
     --social: #ff0c0c;
     --icon: #8b0303;
+    --progress-bar: #ffd7d7;
+    --timeline-bg: #857c7c;
 }
 
 /*----------Special Paddings/Margins/Text----------*/
@@ -56,10 +58,13 @@ h5 {
 /*----------body----------*/
 
 body {
+    min-height: 100vh;
     font-family: var(--text-fonts);
     font-weight: 300;
     background-color: var(--background);
     color: var(--black);
+    display: flex;
+    flex-direction: column;
 }
 
 /*----------Header----------*/
@@ -205,7 +210,7 @@ header {
 
 footer {
     color: var(--white);
-    margin: 0;
+    margin-top: auto;
     padding: 20px;
     background-color: #163653e7;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#163653e7), to(#686868));
@@ -402,62 +407,23 @@ footer .cv-pdf i:hover {
 }
 
 /*--Work History--*/
-.timeline-item {
-    padding: 35px 20px 0px 20px;
-    position: relative;
-    color: var(--icon);
-    border-left: 1px solid;
-}
-
-.timeline-item p {
-    padding: 0;
-    margin: 0;
-}
-
-.timeline-item::before {
-    content: attr(data-dates);
-    position: absolute;
-    left: 25px;
-    top: 35px;
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-.timeline-item::after {
-    width: 12px;
-    height: 12px;
-    display: block;
-    top: 25px;
-    position: absolute;
-    left: -6px;
-    border-radius: 12px;
-    content: '';
-    background: var(--home);
-}
 
 .work-place{
-    color: var(--black);
-}
-
-.work-date,
-.work-title{
-    font-family: var(--headers);
-    font-weight: 500;
+    font-size: 25px;
 }
 
 .work-date{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .work-title{
     font-size: 18px;
 }
 
-.work-items {
-    margin-bottom: 30px;
+.work-title,
+.work-date{
+    color:var(--white)
 }
-
 /*--Skills--*/
 .skills-icon {
     font-size: 20px;
@@ -476,7 +442,7 @@ footer .cv-pdf i:hover {
     height: 25px;
     margin: 5px;
     border: 1px solid var(--black);
-    background-color: #ffd7d7;
+    background-color: var(--progress-bar);
 
 }
 
@@ -493,10 +459,130 @@ footer .cv-pdf i:hover {
 }
 
 /*----------Education----------*/
-/*--Map--*/
-div#map {
-    min-height: 360px;
+.timeline-date{
+    font-size: 25px;
 }
+
+.timeline-institution{
+    font-size: 20px;
+}
+
+.timeline-course{
+    font-size: 18px;
+}
+
+.timeline-course,
+.timeline-institution{
+    color: var(--white)
+}
+
+.ed-sub-header{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.grade-caption{
+    font-family: var(--headers);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.grade-t-headers{
+    font-family: var(--headers);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.grade-data{
+    font-family: var(--text-fonts);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.other-courses{
+    font-family: var(--text-fonts);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.course-p{
+    font-family: var(--headers);
+    font-size: 20px;
+}
+
+/*----------Timeline Line----------*/
+/*--Used on RESUME and EDUCATION Pages--*/
+
+/*-Timeline line-*/
+.timeline {
+    position: relative;
+    max-width: 430px;
+    margin: 0 auto;
+}
+  
+  /*-Timeline line-*/
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--black);
+    top: 5px;
+    bottom: 10px;
+    margin-left: -3px;
+    left: 30px;
+  }
+  
+  /*-Timeline container-*/
+  .timeline-container {
+    padding: 10px;
+    position: relative;
+    background-color: var(--background);
+    width: 100%;
+    padding-left: 50px;
+  }
+  
+  /*-The circles on the timeline-*/
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 130px;
+    background-color: var(--icon);
+    border: 1px solid var(--black);
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+   
+  /*-Arrows pointer-*/
+  .arrow::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 30px;
+    width: 0;
+    z-index: 1;
+    left: 40px;
+    border: medium solid var(--icon);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--icon) transparent transparent;
+  }
+   
+  /*-circle placement-*/
+  .arrow::after {
+    left: 18px;
+  }
+  
+  /*-Content-*/
+  .timeline-content {
+    margin: 0px;
+    padding: 10px 15px;
+    background-color: var(--timeline-bg);
+    border: 3px solid var(--icon);
+    position: relative;
+    border-radius: 15px;
+  }
 
 /*----------Media Queries----------*/
 
@@ -546,3 +632,7 @@ div#map {
         max-width: 30%;
     }
 }
+
+
+
+  
