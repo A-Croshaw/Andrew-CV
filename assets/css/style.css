@@ -441,13 +441,16 @@ footer .cv-pdf i:hover {
     position: relative;
     height: 25px;
     margin: 5px;
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
     background-color: var(--progress-bar);
-
 }
 
 .progress-sec{
-    padding: 0px 60px;
+    padding: 0px 30px;
+}
+
+.progress-txt{
+    color: var(--black);
 }
 
 .progress-type {
